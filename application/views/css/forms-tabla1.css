@@ -1,0 +1,64 @@
+
+h2 {font-size:36px; margin:0 0 10px 0}
+p {margin: 5px 0 1px 0;}
+table{background:#fff;}
+table.width200,table.rwd_auto {border:0px solid #ccc;width:100%;margin:0 0 20px 0}
+    .width200 th,.rwd_auto th {color:#fff;background:rgb(0,64,80);padding:9px;text-align:center;}
+    .width200 td,.rwd_auto td {border-bottom:0px solid #fff;padding: 9px;text-align:left;color: rgb(111,111,111)}
+    .width200 tr:last-child td, .rwd_auto tr:last-child td{border:0}
+    .width200 tr:last-child td, .rwd_auto tr:last-child td{border:0}
+
+.rwd {width:100%;overflow:auto;}
+    .rwd table.rwd_auto {width:auto;min-width:100%}
+        .rwd_auto th,.rwd_auto td {/* white-space: nowrap; */}
+
+tr:nth-child(even) {
+    background-color: #eaeaea;
+}
+
+@media only screen and (max-width: 760px), (min-width: 768px) and (max-width: 1024px)
+{
+
+    table.width200, .width200 thead, .width200 tbody, .width200 th, .width200 td, .width200 tr { display: block; }
+    .width200 thead tr { position: absolute;top: -9999px;left: -9999px; }
+    .width200 tr { border: 1px solid #ccc; }
+    .width200 td { border: none;border-bottom: 1px solid #ccc; position: relative;padding-left: 50%;text-align:left }
+    .width200 td:before {  position: absolute; top: 6px; left: 6px; width: 45%; padding-right: 10px; white-space: nowrap;}
+    .width200 td:nth-of-type(1):before { content: "Nombre"; }
+    .width200 td:nth-of-type(2):before { content: "Apellidos"; }
+    .width200 td:nth-of-type(3):before { content: "Cargo"; }
+    .width200 td:nth-of-type(4):before { content: "Twitter"; }
+    .width200 td:nth-of-type(5):before { content: "ID"; }
+
+    .descarto {display:none;}
+    .fontsize {font-size:11px}
+}
+
+@media only screen and (max-width: 299px){
+    .descarto {display:none;}
+    .fontsize {font-size: 6px}
+}
+
+
+@media only screen and (min-width : 300px) and (max-width : 400px)
+{   
+
+    table.width200, .width200 thead, .width200 tbody, .width200 th, .width200 td, .width200 tr { width: 20%; }
+
+    .width200 thead tr { width: 20%; }
+    .width200 tr { border: 1px solid #ccc; }
+    .width200 td { border: none;border-bottom: 1px solid #ccc  ; padding-left: 20%;text-align:left }
+    .width200 td:before {left: 4px; width: 20%; padding-right: 5px; white-space: nowrap;}
+    .fontsize {font-size: 10px;}
+}
+
+@media only screen and (min-width : 400px) and (max-width : 500px)
+{  
+    .descarto {display:none;}.fontsize {font-size: 10px}
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px)
+{
+    .descarto {display:none;}.fontsize {font-size:11px}
+}

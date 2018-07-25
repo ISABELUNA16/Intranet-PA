@@ -1,0 +1,1676 @@
+@import url('opensans.css');
+html, body{ border-collapse: collapse; box-sizing: border-box; padding: 0; margin: 0; height: 100%; font-family: "Segoe UI", "Open Sans", sans-serif, serif;font-size: 0.875rem;line-height: 1.1; font-weight: 400;font-style: normal;}
+.deudas{background-color: blue;}
+.input{box-sizing: border-box; -moz-box-sizing: border-box; width: 80%; height: 39px;  padding: 8px 10px; outline: none; border-width: 1px; border-style: solid; border-radius: 0; border-color: rgb(112,146,184); background: #fff;font: 15px/19px 'Open Sans', Helvetica, Arial, sans-serif; color: #404040; appearance: normal; -moz-appearance: none; -webkit-appearance: none;}
+.row{ width: 90%; height: 40px;}
+.select select{ display: block; box-sizing: border-box; -moz-box-sizing: border-box; width: 100%; height: 39px; padding: 8px 10px; outline: none; border-width: 1px; border-style: solid; border-radius: 0; border-color: rgb(112,146,184); background: #fff; font: 15px/19px 'Open Sans', Helvetica, Arial, sans-serif; color: #404040; appearance: normal;-moz-appearance: none;-webkit-appearance: none;}
+.btninfo{ width: 40px; height: 39px; background-color: rgb(15,91,153); color: white; border-color: rgb(15,91,153); border-radius: 3px; padding-left: 10px;}
+.cancelado{float: left; width: 23%; height: 70px; margin-left: -10px; text-align: center; color: white; border-radius: 3px; font-size:11px;}
+.vencido{ float: center; width: 23%; height: 70px; text-align: center; margin-left:-90px; color: white; border-radius: 3px; font-size:11px;}
+.aprobado { color: white;}
+.desaprobado{ color: white;}
+.todos{ color: white;}
+.pendiente{ float: right; width: 23%; height: 70px; margin-top: -76px; margin-right: 80px; color: white; border-radius: 3px; font-size: 11px;}
+.total{  float: right; width: 23%; height: 70px; margin-top: -103px; color: white; border-radius: 3px; font-size: 11px;}
+.success{ background-color: rgb(66,151,66); height: 25px; padding-top: 3px;}
+.success:hover{ background-color: rgb(175,220,175); color: black;}
+.danger{ background-color: rgb(162,37,34); height: 25px; padding-top: 3px;}
+.danger:hover{ background-color: rgb(233,152,150); color: black;}
+.every{ background-color: rgb(162,37,34); height: 25px; padding-top: 3px; }
+.every:hover{ background-color: rgb(233,152,150); color: black; }
+.warning{ background-color: rgb(190,116,16); height: 25px; padding-top: 3px;}
+.warning:hover{  background-color: rgb(243,187,112); color: black;}
+.every{ background-color: rgb(17,56,121);}
+.every:hover{ background-color: rgb(71,131,228); color: black;}
+.info{ border:0;}
+.text-izquierda {text-align: left;}
+.text-derecha {text-align: right;}
+.text-centrado { text-align: center;}
+.text-justificado { text-align: justify;}
+.v-align-top {vertical-align: top;}
+.v-align-bottom { vertical-align: bottom;}
+.v-align-baseline { vertical-align: baseline;}
+.v-align-middle { vertical-align: middle;}
+.v-align-sub { vertical-align: sub;}
+.v-align-super { vertical-align: super;}
+.v-align-top-text {vertical-align: text-top;}
+.v-align-bottom-text { vertical-align: text-bottom;}
+.text-dashed { border: 0;border-bottom: 1px gray dashed; display: inline;}
+.indent-paragraph:first-letter { margin-left: 2.5rem;}
+.text-secondary { font-size: 0.75rem;}
+.text-accent,
+.text-enlarged { font-size: 1.1rem;}
+.text-default { font-size: 0.875rem;}
+.text-small { font-size: 0.625rem;}
+.text-light { font-weight: 300rem;}
+.text-ellipsis { overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.login-form { position: relative; width: 100%; height: 100%;}
+.padding20 { padding: 1.25rem;}
+.tabla01{ margin-left: 10px; margin-right: 10px;}
+hr.thin { height: 1px;}
+hr { border: 0; height: 2px; background-color: #88b9e3;}
+@media (min-width: 1500px) and (max-width: 1600px){
+    .barra{  position:relative;  font-size: 40px; color: #fff; top: 45px; margin-left: -80px; }
+    .cabecera{ margin-left: 120px; text-align: left; position: static; background-image: url(../image/logog.png); background-repeat: no-repeat; background-size: contain; width: 100%; height: 200px;top: 10;}
+    .bg-fondo {background-image: url(../image/avion-volando.jpg); background-size: cover; background-attachment: fixed; background-repeat: no-repeat; background-position: bottom center; }
+    big{ font-size: 100px;}
+    .login-form .container{width: 50%; height: 500px;left: 20%;top: 30%; bottom: 40%; position: fixed; background-color: rgba(255,255,255, 0.3);-moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3); -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3); box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3); border: 1px solid rgba(255, 255, 255, 0.3); border-radius: 30px; padding: 80px; -webkit-transform: scale(.8); transform: scale(.8); }
+    .login-form .container form .form-control{ background-color: rgba(255,255,255,0.5); text-decoration: none; border-radius: 40px; font-size: 30px; width: 100%; height: 80px; border: 0; padding-left: 40px; margin-bottom: 20px; }
+    .login-form .container form .button-control{ margin-top: 20px; color: #fff; font-size: 30px; background-color: #0057AE; border-radius: 40px; width: 105%; height: 80px; border: 0; }
+    .login-form .container form .button-control:hover{ background-color: #0078F0; }
+    .titulo{font-size: 50px; text-align: center; color: rgb(175,145,1);}
+    .subtitulo{font-size: 30px; text-align: center;}
+    .login-form .div-form{ text-align: center; width: 90%; border-radius: 10px; background-color: rgba(255,255,255,0.4); margin-left: 5%; margin-right: 5%; margin-top: 5%; padding-bottom: 30px; }
+    .div-alumno{ color: white; font-size:50px; padding: 10px; }
+    .div-descripcion{color: black; padding: 30px;  font-size: 30px; }
+    .btn-rojo{ background-color: #A20025; width: 200px;  height: 200px; border: 0;font-size: 24px; margin: 10px;color: #fff; }
+    .btn-azul{
+        background-color: #16499A;
+        width: 200px;
+        height: 200px;
+        border: 0;
+        font-size: 24px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-verde{
+        background-color: #128023;
+        width: 200px;
+        height: 200px;
+        border: 0;
+        font-size: 24px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-guinda{
+        background-color: #76608A;
+        width: 200px;
+        height: 200px;
+        border: 0;
+        font-size: 24px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-dark{
+        background-color: #333333;
+        width: 200px;
+        height: 200px;
+        border: 0;
+        font-size: 24px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-naranja{
+        background-color: #BF5A15;
+        width: 200px;
+        height: 200px;
+        border: 0;
+        font-size: 24px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-tile{
+        background-color: #004050;
+        width: 200px;
+        height: 200px;
+        border: 0;
+        font-size: 24px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-guinda{
+        background-color: #81003C;
+        width: 200px;
+        height: 200px;
+        border: 0;
+        font-size: 24px;
+        margin: 10px;
+        color: #fff;
+    }
+}
+
+@media (min-width: 2500px) and (max-width: 2600px){
+    .barra{
+        position:relative;
+        font-size: 70px;
+        color: #fff;
+        top: 70px;
+        margin-left: -90px;
+    }
+    .cabecera{
+        margin-left: 150px;
+        text-align: left;
+        position: static;
+        background-image: url(../image/logog.png);
+        background-repeat: no-repeat;
+        background-size: 60%;
+        width: 100%;
+        height: 300px;
+        top: 10;
+    }
+    .bg-fondo {
+        background-image: url(../image/avion-volando.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: top center;
+    }
+    big{
+        font-size: 100px;
+    }
+    .login-form .container{
+        width: 40%;
+        height: 500px;
+        left: 25%;
+        top: 30%;
+        bottom: 40%;
+        position: fixed;
+        background-color: rgba(255,255,255, 0.3);
+        -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 30px;
+        padding: 80px;
+
+        -webkit-transform: scale(.8);
+        transform: scale(.8);
+    }
+    .login-form .container form .form-control{
+        background-color: rgba(255,255,255,0.5);
+        text-decoration: none;
+        border-radius: 40px;
+        font-size: 30px;
+        width: 95%;
+        height: 80px;
+        border: 0;
+        padding-left: 40px;
+        margin-bottom: 20px;
+    }
+    .login-form .container form .button-control{
+        margin-top: 20px;
+        color: #fff;
+        font-size: 30px;
+        background-color: #0057AE;
+        border-radius: 40px;
+        width: 100%;
+        height: 80px;
+        border: 0;
+    }
+    .login-form .container form .button-control:hover{
+        background-color: #0078F0;
+    }
+    .titulo{
+        font-size: 50px;
+        text-align: center;
+
+    }
+    .subtitulo{
+        font-size: 30px;
+        text-align: center;
+    }
+    .login-form .div-form{
+        text-align: center;
+        width: 90%;
+        border-radius: 10px;
+        background-color: rgba(255,255,255,0.4);
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5%;
+        padding-bottom: 30px;
+    }
+    .div-alumno{
+        color: white;
+        font-size: 50px;
+        padding: 20px;
+        /*text-shadow: black 0.1em 0.1em 0.2em;"*/
+    }
+    .div-descripcion{
+        color: black;
+        padding: 30px;
+        font-size: 30px;
+    }
+    .btn-rojo{
+        background-color: #A20025;
+        width: 250px;
+        height: 250px;
+        border: 0;
+        font-size: 30px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-azul{
+        background-color: #16499A;
+        width: 250px;
+        height: 250px;
+        border: 0;
+        font-size: 30px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-verde{
+        background-color: #128023;
+        width: 250px;
+        height: 250px;
+        border: 0;
+        font-size: 30px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-guinda{
+        background-color: #76608A;
+        width: 250px;
+        height: 250px;
+        border: 0;
+        font-size: 30px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-dark{
+        background-color: #333333;
+        width: 250px;
+        height: 250px;
+        border: 0;
+        font-size: 30px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-naranja{
+        background-color: #BF5A15;
+        width: 250px;
+        height: 250px;
+        border: 0;
+        font-size: 30px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-tile{
+        background-color: #004050;
+        width: 250px;
+        height: 250px;
+        border: 0;
+        font-size: 30px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-guinda{
+        background-color: #81003C;
+        width: 250px;
+        height: 250px;
+        border: 0;
+        font-size: 30px;
+        margin: 10px;
+        color: #fff;
+    }
+}
+
+@media (min-width: 1400px) and (max-width: 1500px){
+    .barra{
+        position:relative;
+        font-size: 40px;
+        color: #fff;
+        top: 30px;
+        margin-left: -60px;
+    }
+    .cabecera{
+        margin-left: 90px;
+        text-align: left;
+        position: static;
+        background-image: url(../image/logog.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 50%;
+        height: 160px;
+        top: 10;
+    }
+    .bg-fondo {
+        background-image: url(../image/avion-volando.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+    big{
+        font-size: 60px;
+    }
+    .login-form .container{
+        width: 30%;
+        height: 350px;
+        left: 25%;
+        top: 20%;
+        bottom: 40%;
+        position: fixed;
+        background-color: rgba(255,255,255, 0.3);
+        -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 30px;
+        padding: 80px;
+
+        -webkit-transform: scale(.8);
+        transform: scale(.8);
+    }
+    .login-form .container form .form-control{
+        background-color: rgba(255,255,255,0.5);
+        text-decoration: none;
+        border-radius: 40px;
+        font-size: 24px;
+        width: 90%;
+        height: 60px;
+        border: 0;
+        padding-left: 40px;
+        margin-bottom: 10px;
+    }
+    .login-form .container form .button-control{
+        margin-top: 10px;
+        color: #fff;
+        font-size: 24px;
+        background-color: #0057AE;
+        border-radius: 40px;
+        width: 100%;
+        height: 60px;
+        border: 0;
+    }
+    .login-form .container form .button-control:hover{
+        background-color: #0078F0;
+    }
+    .titulo{
+        font-size: 30px;
+        text-align: center;
+    }
+    .subtitulo{
+        font-size: 20px;
+        text-align: center;
+    }
+    .login-form .div-form{
+        text-align: center;
+        width: 90%;
+        border-radius: 10px;
+        background-color: rgba(255,255,255,0.4);
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5%;
+        padding-bottom: 30px;
+    }
+    .div-alumno{
+        color: white;
+        font-size: 30px;
+        padding: 20px;
+        text-shadow: black 0.1em 0.1em 0.2em;"
+    }
+    .div-descripcion{
+        color: black;
+        padding: 30px;
+        font-size: 30px;
+    }
+    .btn-rojo{
+        background-color: #A20025;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-azul{
+        background-color: #16499A;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-verde{
+        background-color: #128023;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-guinda{
+        background-color: #76608A;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-dark{
+        background-color: #333333;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-naranja{
+        background-color: #BF5A15;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-tile{
+        background-color: #004050;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-guinda{
+        background-color: #81003C;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px){
+    .barra{
+        position:relative;
+        font-size: 40px;
+        color: #fff;
+        top: 30px;
+        margin-left: -60px;
+    }
+    .cabecera{
+        margin-left: 90px;
+        text-align: left;
+        position: static;
+        background-image: url(../image/logog.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 60%;
+        height: 180px;
+        top: 10;
+    }
+    .bg-fondo {
+        background-image: url(../image/avion-volando.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+    big{
+        font-size: 60px;
+    }
+    .login-form .container{
+        width: 30%;
+        height: 350px;
+        left: 25%;
+        top: 20%;
+        bottom: 40%;
+        position: fixed;
+        background-color: rgba(255,255,255, 0.3);
+        -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 30px;
+        padding: 80px;
+
+        -webkit-transform: scale(.8);
+        transform: scale(.8);
+    }
+    .login-form .container form .form-control{
+        background-color: rgba(255,255,255,0.5);
+        text-decoration: none;
+        border-radius: 40px;
+        font-size: 24px;
+        width: 90%;
+        height: 60px;
+        border: 0;
+        padding-left: 40px;
+        margin-bottom: 10px;
+    }
+    .login-form .container form .button-control{
+        margin-top: 10px;
+        color: #fff;
+        font-size: 24px;
+        background-color: #0057AE;
+        border-radius: 40px;
+        width: 100%;
+        height: 60px;
+        border: 0;
+    }
+    .login-form .container form .button-control:hover{
+        background-color: #0078F0;
+    }
+    .titulo{
+        font-size: 30px;
+        text-align: center;
+    }
+    .subtitulo{
+        font-size: 20px;
+        text-align: center;
+    }
+    .login-form .div-form{
+        text-align: center;
+        width: 90%;
+        border-radius: 10px;
+        background-color: rgba(255,255,255,0.4);
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5%;
+        padding-bottom: 30px;
+    }
+    .div-alumno{
+        color: white;
+        font-size: 30px;
+        padding: 20px;
+        text-shadow: black 0.1em 0.1em 0.2em;"
+    }
+    .div-descripcion{
+        color: black;
+        padding: 30px;
+        font-size: 30px;
+    }
+    .btn-rojo{
+        background-color: #A20025;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-azul{
+        background-color: #16499A;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-verde{
+        background-color: #128023;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-guinda{
+        background-color: #76608A;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-dark{
+        background-color: #333333;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-naranja{
+        background-color: #BF5A15;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-tile{
+        background-color: #004050;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-guinda{
+        background-color: #81003C;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1000px){
+    .barra{
+        position:fixed;
+        color: #fff;
+        top: 15px;
+        margin-left: -25px;
+    }
+    .cabecera{
+        margin-left: 40px;
+        text-align: left;
+        position: static;
+        background-image: url(../image/logog.png);
+        background-repeat: no-repeat;
+        background-size: 90%;
+        width: 100%;
+        height: 180px;
+        top: 10;
+    }
+    .bg-fondo {
+        background-image: url(../image/avion-volando.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: top center;
+    }
+    big{
+        font-size: 60px;
+    }
+    .login-form .container{
+        width: 50%;
+        height: 330px;
+        left: 15%;
+        top: 20%;
+        bottom: 40%;
+        position: fixed;
+        background-color: rgba(255,255,255, 0.3);
+        -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 30px;
+        padding: 80px;
+        -webkit-transform: scale(.8);
+        transform: scale(.8);
+    }
+    .login-form .container form .form-control{
+        background-color: rgba(255,255,255,0.5);
+        text-decoration: none;
+        border-radius: 40px;
+        font-size: 24px;
+        width: 90%;
+        height: 60px;
+        border: 0;
+        padding-left: 40px;
+        margin-bottom: 10px;
+    }
+    .login-form .container form .button-control{
+        margin-top: 10px;
+        color: #fff;
+        font-size: 24px;
+        background-color: #0057AE;
+        border-radius: 40px;
+        width: 100%;
+        height: 60px;
+        border: 0;
+    }
+    .login-form .container form .button-control:hover{
+        background-color: #0078F0;
+    }
+    .titulo{
+        font-size: 30px;
+        text-align: center;
+    }
+    .subtitulo{
+        font-size: 20px;
+        text-align: center;
+    }
+    .login-form .div-form{
+        text-align: center;
+        width: 90%;
+        border-radius: 10px;
+        background-color: rgba(255,255,255,0.4);
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5%;
+        padding-bottom: 30px;
+    }
+    .div-alumno{
+        color: white;
+        font-size: 30px;
+        padding: 20px;
+        text-shadow: black 0.1em 0.1em 0.2em;
+
+    }
+    .div-descripcion{
+        color: black;
+        padding: 30px;
+        font-size: 30px;
+    }
+    .btn-rojo{
+        background-color: #A20025;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-azul{
+        background-color: #16499A;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-verde{
+        background-color: #128023;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-guinda{
+        background-color: #76608A;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-dark{
+        background-color: #333333;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-naranja{
+        background-color: #BF5A15;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-tile{
+        background-color: #004050;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-guinda{
+        background-color: #81003C;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 740px){
+    .barra{
+        position:fixed;
+        color: #fff;
+        top: 15px;
+        margin-left: -25px;
+    }
+    .cabecera{
+        margin-left: 40px;
+        text-align: left;
+        position: static;
+        background-image: url(../image/logog.png);
+        background-repeat: no-repeat;
+        background-size: 50%;
+        width: 100%;
+        height: 300px;
+        top: 10;
+    }
+    .bg-fondo {
+        background-image: url(../image/avion-volando.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: top center;
+    }
+    big{
+        font-size: 30px;
+    }
+    .titulo{
+        font-size: 30px;
+        text-align: center;
+    }
+    .subtitulo{
+        font-size: 20px;
+        text-align: center;
+    }
+    .login-form .container{
+        width: 80%;
+        height: 380px;
+        left: 3%;
+        top: 10%;
+        bottom: 40%;
+        position: fixed;
+        background-color: rgba(255,255,255, 0.3);
+        -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 30px;
+        padding: 30px;
+
+        -webkit-transform: scale(.8);
+        transform: scale(.8);
+    }
+    .login-form .container form .form-control{
+        background-color: rgba(255,255,255,0.5);
+        text-decoration: none;
+        border-radius: 40px;
+        font-size: 16px;
+        width: 95%;
+        height: 40px;
+        border: 0;
+        padding-left: 20px;
+        margin-bottom: 5px;
+    }
+    .login-form .container form .button-control{
+        color: #fff;
+        font-size: 16px;
+        background-color: #0057AE;
+        border-radius: 40px;
+        width: 100%;
+        height: 40px;
+        border: 0;
+    }
+    .login-form .container form .button-control:hover{
+        background-color: #0078F0;
+    }
+    .titulo{
+        font-size: 30px;
+        text-align: center;
+    }
+    .subtitulo{
+        font-size: 20px;
+        text-align: center;
+    }
+    .login-form .div-form{
+        text-align: center;
+        width: 90%;
+        border-radius: 10px;
+        background-color: rgba(255,255,255,0.4);
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5%;
+        padding-bottom: 30px;
+    }
+    .div-alumno{
+        color: white;
+        font-size: 30px;
+        padding: 20px;
+        text-shadow: black 0.1em 0.1em 0.2em;
+    }
+    .div-descripcion{
+        color: black;
+        padding: 30px;
+        font-size: 30px;
+    }
+    .btn-rojo{
+        background-color: #A20025;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-azul{
+        background-color: #16499A;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-verde{
+        background-color: #128023;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-guinda{
+        background-color: #76608A;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-dark{
+        background-color: #333333;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-naranja{
+        background-color: #BF5A15;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-tile{
+        background-color: #004050;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+    .btn-guinda{
+        background-color: #81003C;
+        width: 150px;
+        height: 150px;
+        border: 0;
+        font-size: 20px;
+        margin: 10px;
+        color: #fff;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 700px){
+    .barra{
+        position:fixed;
+        color: #fff;
+        top: 15px;
+        margin-left: -25px;
+    }
+    .cabecera{
+        margin-left: 40px;
+        text-align: left;
+        position: static;
+        background-image: url(../image/logog.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 80%;
+        height: 60px;
+        top: 10;
+    }
+    .bg-fondo {
+        background-image: url(../image/avion-volando.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+    big{
+        font-size: 30px;
+    }
+    .login-form .container{
+        width: 80%;
+        height: 260px;
+        left: 3%;
+        top: 15%;
+        bottom: 40%;
+        position: fixed;
+        background-color: rgba(255,255,255, 0.3);
+        -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 30px;
+        padding: 30px;
+
+        -webkit-transform: scale(.8);
+        transform: scale(.8);
+    }
+    .login-form .container form .form-control{
+        background-color: rgba(255,255,255,0.5);
+        text-decoration: none;
+        border-radius: 40px;
+        font-size: 16px;
+        width: 95%;
+        height: 40px;
+        border: 0;
+        padding-left: 20px;
+        margin-bottom: 5px;
+    }
+    .login-form .container form .button-control{
+        color: #fff;
+        font-size: 16px;
+        background-color: #0057AE;
+        border-radius: 40px;
+        width: 100%;
+        height: 40px;
+        border: 0;
+    }
+    .login-form .container form .button-control:hover{
+        background-color: #0078F0;
+    }
+    .titulo{
+        font-size: 20px;
+        text-align: center;
+    }
+    .subtitulo{
+        font-size: 10px;
+        text-align: center;
+    }
+    .login-form .div-form{
+        text-align: center;
+        width: 90%;
+        border-radius: 10px;
+        background-color: rgba(255,255,255,0.4);
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5%;
+        padding-bottom: 30px;
+    }
+    .div-alumno{
+        color: rgb(0,37,83);
+        font-size: 18px;
+        padding: 15px;
+        font-weight: bold;
+        /*text-shadow: black 0.1em 0.1em 0.2em;"*/
+    }
+    .div-descripcion{
+        color: black;
+        padding: 10px;
+        font-size: 12px;
+    }
+    .btn-rojo{
+        background-color: #A20025;
+        width: 80px;
+        height: 80px;
+        border: 0;
+        font-size: 10px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-azul{
+        background-color: #16499A;
+        width: 80px;
+        height: 80px;
+        border: 0;
+        font-size: 10px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-verde{
+        background-color: #128023;
+        width: 80px;
+        height: 80px;
+        border: 0;
+        font-size: 10px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-guinda{
+        background-color: #76608A;
+        width: 80px;
+        height: 80px;
+        border: 0;
+        font-size: 10px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-dark{
+        background-color: #333333;
+        width: 80px;
+        height: 80px;
+        border: 0;
+        font-size: 10px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-naranja{
+        background-color: #BF5A15;
+        width: 80px;
+        height: 80px;
+        border: 0;
+        font-size: 10px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-tile{
+        background-color: #004050;
+        width: 80px;
+        height: 80px;
+        border: 0;
+        font-size: 10px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-guinda{
+        background-color: #81003C;
+        width: 80px;
+        height: 80px;
+        border: 0;
+        font-size: 10px;
+        margin: 5px;
+        color: #fff;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 600px){
+    .barra{
+        position:fixed;
+        color: #fff;
+        top: 15px;
+        margin-left: -25px;
+    }
+    .cabecera{
+        margin-left: 40px;
+        text-align: left;
+        position: static;
+        background-image: url(../image/logog.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 80%;
+        height: 50px;
+        top: 10;
+    }
+    .bg-fondo {
+        background-image: url(../image/avion-volando.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+    big{
+        font-size: 30px;
+    }
+    .titulo{
+        font-size: 20px;
+        text-align: center;
+    }
+    .subtitulo{
+        font-size: 14px;
+        text-align: center;
+    }
+    .login-form .container{
+        width: 80%;
+        height: 260px;
+        left: 3%;
+        top: 15%;
+        bottom: 40%;
+        position: fixed;
+        background-color: rgba(255,255,255, 0.3);
+        -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 30px;
+        padding: 30px;
+
+        -webkit-transform: scale(.8);
+        transform: scale(.8);
+    }
+    .login-form .container form .form-control{
+        background-color: rgba(255,255,255,0.5);
+        text-decoration: none;
+        border-radius: 40px;
+        font-size: 16px;
+        width: 95%;
+        height: 40px;
+        border: 0;
+        padding-left: 20px;
+        margin-bottom: 5px;
+    }
+    .login-form .container form .button-control{
+        color: #fff;
+        font-size: 16px;
+        background-color: #0057AE;
+        border-radius: 40px;
+        width: 100%;
+        height: 40px;
+        border: 0;
+    }
+    .login-form .container form .button-control:hover{
+        background-color: #0078F0;
+    }
+    .login-form .div-form{
+        text-align: center;
+        width: 90%;
+        border-radius: 10px;
+        background-color: rgba(255,255,255,0.4);
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5%;
+        padding-bottom: 30px;
+    }
+    .div-alumno{
+        color: white;
+        font-size: 14px;
+        padding: 15px;
+        text-shadow: black 0.1em 0.1em 0.2em;"
+    }
+    .div-descripcion{
+        color: black;
+        padding: 10px;
+        font-size: 12px;
+    }
+    .btn-rojo{
+        background-color: #A20025;
+        width: 80px;
+        height: 80px;
+        border: 0;
+        font-size: 10px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-azul{
+        background-color: #16499A;
+        width: 80px;
+        height: 80px;
+        border: 0;
+        font-size: 10px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-verde{
+        background-color: #128023;
+        width: 80px;
+        height: 80px;
+        border: 0;
+        font-size: 10px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-guinda{
+        background-color: #76608A;
+        width: 80px;
+        height: 80px;
+        border: 0;
+        font-size: 10px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-dark{
+        background-color: #333333;
+        width: 80px;
+        height: 80px;
+        border: 0;
+        font-size: 10px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-naranja{
+        background-color: #BF5A15;
+        width: 80px;
+        height: 80px;
+        border: 0;
+        font-size: 10px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-tile{
+        background-color: #004050;
+        width: 80px;
+        height: 80px;
+        border: 0;
+        font-size: 10px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-guinda{
+        background-color: #81003C;
+        width: 80px;
+        height: 80px;
+        border: 0;
+        font-size: 10px;
+        margin: 5px;
+        color: #fff;
+    }
+}
+
+@media (min-width: 400px) and (max-width: 500px){
+    .barra{
+        position:fixed;
+        color: #fff;
+        top: 15px;
+        margin-left: -25px;
+    }
+    .cabecera{
+        margin-left: 40px;
+        text-align: left;
+        position: static;
+        background-image: url(../image/logog.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 90%;
+        height: 100px;
+        top: 10;
+    }
+    .bg-fondo {
+        background-image: url(../image/avion-volando.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+    big{
+        font-size: 30px;
+    }
+    .login-form .container{
+        width: 80%;
+        height: 260px;
+        left: 3%;
+        top: 15%;
+        bottom: 40%;
+        position: fixed;
+        background-color: rgba(255,255,255, 0.3);
+        -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 30px;
+        padding: 30px;
+
+        -webkit-transform: scale(.8);
+        transform: scale(.8);
+    }
+    .login-form .container form .form-control{
+        background-color: rgba(255,255,255,0.5);
+        text-decoration: none;
+        border-radius: 40px;
+        font-size: 16px;
+        width: 95%;
+        height: 40px;
+        border: 0;
+        padding-left: 20px;
+        margin-bottom: 5px;
+    }
+    .login-form .container form .button-control{
+        color: #fff;
+        font-size: 16px;
+        background-color: #0057AE;
+        border-radius: 40px;
+        width: 100%;
+        height: 40px;
+        border: 0;
+    }
+    .login-form .container form .button-control:hover{
+        background-color: #0078F0;
+    }
+    .login-form .div-form{
+        text-align: center;
+        width: 90%;
+        border-radius: 10px;
+        background-color: rgba(255,255,255,0.4);
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5%;
+        padding-bottom: 30px;
+    }
+    .div-alumno{
+        color: white;
+        font-size: 14px;
+        padding: 15px;
+        text-shadow: black 0.1em 0.1em 0.2em;"
+    }
+    .div-descripcion{
+        color: black;
+        padding: 10px;
+        font-size: 12px;
+    }
+    .btn-rojo{
+        background-color: #A20025;
+        width: 100px;
+        height: 100px;
+        border: 0;
+        font-size: 11px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-azul{
+        background-color: #16499A;
+        width: 100px;
+        height: 100px;
+        border: 0;
+        font-size: 11px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-verde{
+        background-color: #128023;
+        width: 100px;
+        height: 100px;
+        border: 0;
+        font-size: 11px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-guinda{
+        background-color: #76608A;
+        width: 100px;
+        height: 100px;
+        border: 0;
+        font-size: 11px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-dark{
+        background-color: #333333;
+        width: 100px;
+        height: 100px;
+        border: 0;
+        font-size: 11px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-naranja{
+        background-color: #BF5A15;
+        width: 100px;
+        height: 100px;
+        border: 0;
+        font-size: 11px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-tile{
+        background-color: #004050;
+        width: 100px;
+        height: 100px;
+        border: 0;
+        font-size: 11px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-guinda{
+        background-color: #81003C;
+        width: 100px;
+        height: 100px;
+        border: 0;
+        font-size: 11px;
+        margin: 5px;
+        color: #fff;
+    }
+}
+
+@media (min-width: 300px) and (max-width: 400px){
+    .barra{
+        position: relative;
+        color: #fff;
+        top: 15px;
+        margin-left: -25px;
+    }
+    .cabecera{
+        margin-left: 40px;
+        text-align: left;
+        position: static;
+        background-image: url(../image/logog.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 80%;
+        height: 50px;
+        top: 10;
+    }
+    .bg-fondo {
+        background-image: url(../image/avion-volando.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+    big{
+        font-size: 30px;
+    }
+    .login-form .container{
+        width: 80%;
+        height: 260px;
+        left: 3%;
+        top: 15%;
+        bottom: 40%;
+        position: fixed;
+        background-color: rgba(255,255,255, 0.3);
+        -moz-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 30px;
+        padding: 30px;
+
+        -webkit-transform: scale(.8);
+        transform: scale(.8);
+    }
+    .login-form .container form .form-control{
+        background-color: rgba(255,255,255,0.5);
+        text-decoration: none;
+        border-radius: 40px;
+        font-size: 16px;
+        width: 95%;
+        height: 40px;
+        border: 0;
+        padding-left: 20px;
+        margin-bottom: 5px;
+    }
+    .login-form .container form .button-control{
+        color: #fff;
+        font-size: 16px;
+        background-color: #0057AE;
+        border-radius: 40px;
+        width: 100%;
+        height: 40px;
+        border: 0;
+    }
+    .login-form .container form .button-control:hover{
+        background-color: #0078F0;
+    }
+    .login-form .div-form{
+        text-align: center;
+        width: 90%;
+        border-radius: 10px;
+        background-color: rgba(255,255,255,0.4);
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 5%;
+        padding-bottom: 30px;
+    }
+    .div-alumno{
+        color: white;
+        font-size: 14px;
+        padding: 15px;
+        text-shadow: black 0.1em 0.1em 0.2em;"
+    }
+    .div-descripcion{
+        color: black;
+        padding: 10px;
+        font-size: 12px;
+    }
+    .btn-rojo{
+        background-color: #A20025;
+        width: 100px;
+        height: 100px;
+        border: 0;
+        font-size: 11px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-azul{
+        background-color: #16499A;
+        width: 100px;
+        height: 100px;
+        border: 0;
+        font-size: 11px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-verde{
+        background-color: #128023;
+        width: 100px;
+        height: 100px;
+        border: 0;
+        font-size: 11px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-guinda{
+        background-color: #76608A;
+        width: 100px;
+        height: 100px;
+        border: 0;
+        font-size: 11px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-dark{
+        background-color: #333333;
+        width: 100px;
+        height: 100px;
+        border: 0;
+        font-size: 11px;
+        /* margin: 5px; */
+        color: #fff;
+    }
+    .btn-naranja{
+        background-color: #BF5A15;
+        width: 100px;
+        height: 100px;
+        border: 0;
+        font-size: 11px;
+        margin: 5px;
+        color: #fff;
+    }
+    .btn-tile{
+        background-color: #004050;
+        width: 100px;
+        height: 100px;
+        border: 0;
+        font-size: 11px;
+        /* margin: 5px; */
+        color: #fff;
+    }
+    .btn-guinda{
+        background-color: #81003C;
+        width: 100px;
+        height: 100px;
+        border: 0;
+        font-size: 11px;
+        margin: 5px;
+        color: #fff;
+    }
+}
